@@ -89,7 +89,7 @@ export default function SchemaOrganization({
         ],
         "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": COMPANY_INFO.phone,
+            "telephone": COMPANY_INFO.phones,
             "contactType": "customer service",
             "email": COMPANY_INFO.email,
             "areaServed": {
@@ -100,7 +100,6 @@ export default function SchemaOrganization({
         },
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": COMPANY_INFO.address,
             "addressLocality": "Accra",
             "addressRegion": "Greater Accra",
             "addressCountry": "GH"

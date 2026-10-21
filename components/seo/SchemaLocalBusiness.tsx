@@ -50,11 +50,10 @@ export default function SchemaLocalBusiness({
         "name": COMPANY_INFO.name,
         "image": `${COMPANY_INFO.website}/logo111.png`,
         "url": COMPANY_INFO.website,
-        "telephone": COMPANY_INFO.phone,
+        "telephone": COMPANY_INFO.phones,
         "email": COMPANY_INFO.email,
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": COMPANY_INFO.address,
             "addressLocality": "Accra",
             "addressRegion": "Greater Accra",
             "addressCountry": "GH"

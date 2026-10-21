@@ -87,15 +87,31 @@ export default function ContactContent() {
                         </div>
 
                         <div className="space-y-6">
+                            <motion.div whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 300 }}>
+                                <Card className="border-l-4 border-l-heureuse-navy hover:border-l-heureuse-gold transition-colors">
+                                    <CardContent className="flex items-center gap-4 p-6">
+                                        <div className="w-12 h-12 rounded-full bg-heureuse-navy/5 flex items-center justify-center text-heureuse-navy">
+                                            <Phone className="h-6 w-6" />
+                                        </div>
+                                        <div>
+                                            <div className="font-semibold">Phone</div>
+                                            <div className="flex flex-col">
+                                                {COMPANY_INFO.phones.map((phone) => (
+                                                    <a key={phone} href={`tel:${phone.replace(/\s/g, '')}`} className="text-muted-foreground hover:text-heureuse-navy transition-colors">{phone}</a>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </motion.div>
                             {[
-                                { icon: Phone, label: "Phone", value: COMPANY_INFO.phone, href: `tel:${COMPANY_INFO.phone.replace(/\s/g, '')}` },
                                 { icon: Mail, label: "Email", value: COMPANY_INFO.email, href: `mailto:${COMPANY_INFO.email}` },
-                                { icon: MapPin, label: "Office Address", value: COMPANY_INFO.address, href: null }
-                            ].map((item, index) => (
-                                <motion.div key={index} whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 300 }}>
+                                { icon: MapPin, label: "Location", value: COMPANY_INFO.address, href: null }
+                            ].map((item) => (
+                                <motion.div key={item.label} whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 300 }}>
                                     <Card className="border-l-4 border-l-heureuse-navy hover:border-l-heureuse-gold transition-colors">
                                         <CardContent className="flex items-center gap-4 p-6">
-                                            <div className="w-12 h-12 rounded-full bg-heureuse-navy/5 flex items-center justify-center text-heureuse-navy group-hover:bg-heureuse-gold/10 transition-colors">
+                                            <div className="w-12 h-12 rounded-full bg-heureuse-navy/5 flex items-center justify-center text-heureuse-navy">
                                                 <item.icon className="h-6 w-6" />
                                             </div>
                                             <div>

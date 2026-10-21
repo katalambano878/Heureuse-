@@ -4,10 +4,11 @@ export const COMPANY_INFO = {
     alternateName: ["Heureuse GH", "Heureuse Ghana", "Heureuse Supply", "Heureuse Fuel Supply"],
     tagline: "Reliable Energy, Seamless Delivery",
     description: "Ghana's premier bulk fuel supply and logistics company. Heureuse Logistics specializes in diesel (AGO) and petrol (PMS) delivery to OMCs, mining sites, construction projects, and corporate fleets across all 16 regions.",
-    phone: "+233 53 886 6415",
+    phone: "+233 24 417 7707",
+    phones: ["+233 24 417 7707", "+233 54 012 6640"],
     email: "info@heureuselogistics.com",
-    address: "123 Independence Avenue, Accra, Ghana",
-    whatsapp: "233538866415", // Format for link
+    address: "Accra, Ghana",
+    whatsapp: "233244177707", // Format for link
     website: "https://heureusesupply.com",
     social: {
         linkedin: "https://linkedin.com/company/heureuse-logistics",

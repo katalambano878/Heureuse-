@@ -70,10 +70,12 @@ export default function Footer() {
                                 <MapPin className="h-5 w-5 text-heureuse-gold shrink-0 mt-0.5" />
                                 <span className="text-left">{COMPANY_INFO.address}</span>
                             </li>
-                            <li className="flex items-center gap-3 text-sm text-gray-400 justify-center md:justify-start">
-                                <Phone className="h-5 w-5 text-heureuse-gold shrink-0" />
-                                <a href={`tel:${COMPANY_INFO.phone.replace(/\s/g, '')}`} className="hover:text-white transition-colors">{COMPANY_INFO.phone}</a>
-                            </li>
+                            {COMPANY_INFO.phones.map((phone) => (
+                                <li key={phone} className="flex items-center gap-3 text-sm text-gray-400 justify-center md:justify-start">
+                                    <Phone className="h-5 w-5 text-heureuse-gold shrink-0" />
+                                    <a href={`tel:${phone.replace(/\s/g, '')}`} className="hover:text-white transition-colors">{phone}</a>
+                                </li>
+                            ))}
                             <li className="flex items-center gap-3 text-sm text-gray-400 justify-center md:justify-start">
                                 <Mail className="h-5 w-5 text-heureuse-gold shrink-0" />
                                 <a href={`mailto:${COMPANY_INFO.email}`} className="hover:text-white transition-colors break-all">{COMPANY_INFO.email}</a>

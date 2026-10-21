@@ -40,14 +40,13 @@ export default function JsonLd({ schemas, children }: JsonLdProps) {
         ],
         "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": COMPANY_INFO.phone,
+            "telephone": COMPANY_INFO.phones,
             "contactType": "customer service",
             "areaServed": "GH",
             "availableLanguage": "English"
         },
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": COMPANY_INFO.address,
             "addressLocality": "Accra",
             "addressCountry": "GH"
         }
