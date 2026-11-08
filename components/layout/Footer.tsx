@@ -88,6 +88,9 @@ export default function Footer() {
                     <p className="text-gray-500 text-xs md:text-sm order-2 md:order-1">
                         &copy; {currentYear} {COMPANY_INFO.name}. All rights reserved.
                     </p>
+                    <p className="text-gray-500 text-xs md:text-sm order-3">
+                        Powered by <a href="https://doctorbarns.com" target="_blank" rel="noopener" className="text-gray-500 hover:underline">Doctor Barns Tech</a>
+                    </p>
                     <div className="text-gray-600 text-xs order-1 md:order-2">
                         Reliable Energy. Seamless Delivery.
                     </div>
